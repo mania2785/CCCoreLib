@@ -21,7 +21,7 @@
 #include <cassert>
 
 //Qt
-#include <QCoreApplication>
+// #include <QCoreApplication>
 
 #ifndef CC_DEBUG
 #if defined(CC_CORE_LIB_USES_QT_CONCURRENT)
@@ -1659,7 +1659,7 @@ int DistanceComputationTools::computeCloud2MeshDistancesWithOctree(	const DgmOct
 
 			//Yk.clear(); //not necessary
 
-			QCoreApplication::processEvents(QEventLoop::EventLoopExec); // to allow the GUI to refresh itself
+			// QCoreApplication::processEvents(QEventLoop::EventLoopExec); // to allow the GUI to refresh itself
 			if (progressCb && !nProgress.oneStep())
 			{
 				//process cancelled by the user

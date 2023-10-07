@@ -19,10 +19,6 @@
 //#define COMPUTE_NN_SEARCH_STATISTICS
 //#define ADAPTATIVE_BINARY_SEARCH
 
-//Qt
-#include <QtConcurrentMap>
-#include <QCoreApplication>
-
 #ifndef CC_DEBUG
 //enables multi-threading handling (Release only)
 //requires TBB or QtConcurrent
@@ -3427,7 +3423,7 @@ unsigned DgmOctree::executeFunctionForAllCellsStartingAtLevel(unsigned char star
 			if (progressCb)
 			{
 				progressCb->update((100.0f * cell.index) / m_numberOfProjectedPoints);
-				QCoreApplication::processEvents(QEventLoop::EventLoopExec); // to allow the GUI to refresh itself
+				// QCoreApplication::processEvents(QEventLoop::EventLoopExec); // to allow the GUI to refresh itself
 				if (progressCb->isCancelRequested())
 				{
 					result = false;
